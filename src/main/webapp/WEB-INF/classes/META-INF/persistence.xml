@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+      http://java.sun.com/xml/ns/persistence
+      http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	<persistence-unit name="psc">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<non-jta-data-source>java:comp/env/jdbc/PSC</non-jta-data-source>
+
+		<class>com.psc.model.psc.Branch</class>
+		<class>com.psc.model.psc.CommandStatus</class>
+		<class>com.psc.model.psc.Command</class>
+		<class>com.psc.model.psc.PackType</class>
+		<class>com.psc.model.psc.User</class>
+		<class>com.psc.model.psc.DetailGroupType</class>
+		<class>com.psc.model.psc.DetailGroup</class>
+		<class>com.psc.model.psc.BisBranch</class>
+		<class>com.psc.model.psc.Pack</class>
+		<class>com.psc.model.psc.PackPK</class>
+		<class>com.psc.model.psc.PacksKey</class>
+		<class>com.psc.model.psc.RatePlan</class>
+		<class>com.psc.model.psc.RatePlansKey</class>
+		<class>com.psc.model.psc.RtplType</class>
+		<class>com.psc.model.psc.Zone</class>
+		<class>com.psc.model.psc.PrefixSet</class>
+		<class>com.psc.model.psc.LogicCall</class>
+		<class>com.psc.model.psc.MeasureUnit</class>
+		<class>com.psc.model.psc.VolumeUnit</class>
+		<class>com.psc.model.psc.ServList</class>
+		<class>com.psc.model.psc.ServListsKey</class>
+		<class>com.psc.model.psc.PackRtpl</class>
+		<class>com.psc.model.psc.VActualCommand</class>
+		<class>com.psc.model.psc.TariffType</class>
+		<class>com.psc.model.psc.TariffHistory</class>
+		<class>com.psc.model.psc.TrafficHistory</class>
+		<class>com.psc.model.psc.Country</class>
+		<class>com.psc.model.psc.RatingGroup</class>
+		<class>com.psc.model.psc.Currency</class>
+		<class>com.psc.model.psc.ExchangeType</class>
+		<class>com.psc.model.psc.Expense</class>
+		<class>com.psc.model.psc.Measure</class>
+		<class>com.psc.model.psc.TarificationVolumeType</class>
+		<class>com.psc.model.psc.RoundType</class>
+		<class>com.psc.model.psc.Tax</class>
+		<class>com.psc.model.psc.CommandAccessLog</class>
+		<class>com.psc.model.psc.Upload</class>
+		<class>com.psc.model.psc.TimeClass</class>
+		<class>com.psc.model.psc.Application</class>
+		<class>com.psc.model.psc.ChangeRp</class>
+		<class>com.psc.model.psc.ChangeRpTariff</class>
+		<class>com.psc.model.psc.Region</class>
+		<class>com.psc.model.psc.SubOfferType</class>
+		<class>com.psc.model.psc.FafClass</class>
+		<class>com.psc.model.psc.Faf</class>
+		<class>com.psc.model.psc.DiscountMeasure</class>
+		<class>com.psc.model.psc.TransferChannel</class>
+		<class>com.psc.model.psc.ServiceType</class>
+		<class>com.psc.model.psc.DiscountClass</class>
+		<class>com.psc.model.psc.DiscountType</class>
+		<class>com.psc.model.psc.DiscountPlansKey</class>
+		<class>com.psc.model.psc.DiscountTemplate</class>
+		<class>com.psc.model.psc.DiscountPlan</class>
+		<class>com.psc.model.psc.DiscountPlanDetail</class>
+		<class>com.psc.model.psc.PacksTrhg</class>
+		<class>com.psc.model.psc.TrafficHistoryGroup</class>
+		<class>com.psc.model.psc.ProdDirection</class>
+		<class>com.psc.model.psc.LogicCallType</class>
+		<class>com.psc.model.psc.DirType</class>
+		<class>com.psc.model.psc.PrdrGroup</class>
+		<class>com.psc.model.psc.FinanceAccumulatorType</class>
+		<class>com.psc.model.psc.FinanceAccumulatorDetgHist</class>
+		<class>com.psc.model.psc.CharList</class>
+		<class>com.psc.model.psc.CharListValue</class>
+		<class>com.psc.model.psc.AddChls</class>
+		<class>com.psc.model.psc.ServiceParameter</class>
+		<class>com.psc.model.psc.CommandHist</class>
+		<class>com.psc.model.psc.ServiceParameterKey</class>
+		<class>com.psc.model.psc.ServiceParameterTariff</class>
+		<class>com.psc.model.psc.PriceItem</class>
+		<class>com.psc.model.psc.PriceList</class>
+		<class>com.psc.model.psc.SpecialDay</class>
+		<class>com.psc.model.psc.base.log.ExportRun</class>
+		<class>com.psc.model.psc.base.log.ExportLog</class>
+		<class>com.psc.model.psc.TrafficCharge</class>
+		<class>com.psc.model.psc.AccPart</class>
+		<class>com.psc.model.psc.NumberType</class>
+		<class>com.psc.model.psc.Time</class>
+		<class>com.psc.model.psc.ServiceTrafficCharge</class>
+		<class>com.psc.model.psc.TmclExtRtpl</class>
+		<class>com.psc.model.psc.VTestCommand</class>
+		<class>com.psc.model.psc.VPromCommand</class>
+		<class>com.psc.model.psc.OnceCharge</class>
+		<class>com.psc.model.psc.ChangeEvent</class>
+		<class>com.psc.model.psc.AccNumber</class>
+		<class>com.psc.model.psc.FinSphere</class>
+		<class>com.psc.model.psc.PackCategory</class>
+		<class>com.psc.model.psc.PackOrderType</class>
+		<class>com.psc.model.psc.ScaledPrice</class>
+		<class>com.psc.model.psc.BvdDiscount</class>
+		<class>com.psc.model.psc.BvdDiscountTableHistoryKey</class>
+		<class>com.psc.model.psc.BvdDiscountTableHistory</class>
+		<class>com.psc.model.psc.BvdRatePlanLink</class>
+		<class>com.psc.model.psc.TrafficHistoryGroupDet</class>
+		<class>com.psc.model.psc.BvdDiscountTableValue</class>
+		<class>com.psc.model.psc.BvdValuesDesc</class>
+		<class>com.psc.model.psc.BvdDiscountTableValueTariff</class>
+		<class>com.psc.model.psc.BvdDiscountHistoryDetailGroupLink</class>
+		<class>com.psc.model.psc.CamelRoamTarifZone</class>
+		<class>com.psc.model.psc.RtplRoamSubstitution</class>
+		<class>com.psc.model.psc.RtplZoneSubstitution</class>
+		<class>com.psc.model.psc.CommercialRtplType</class>
+		<class>com.psc.model.psc.SbmsRole</class>
+		<class>com.psc.model.psc.PackSbmsRole</class>
+		<class>com.psc.model.psc.UIState</class>
+        <class>com.psc.model.psc.PackGroup</class>
+		<class>com.psc.model.psc.SpecialNumber</class>
+		<class>com.psc.model.psc.SpecialNumberLink</class>
+		<class>com.psc.model.psc.SpecialNumberLinkKey</class>
+        <class>com.psc.model.psc.RtplNtyp</class>
+        <class>com.psc.model.psc.FinanceAccumulator</class>
+        <class>com.psc.model.psc.base.export.ExportIdMap</class>
+		<class>com.psc.model.psc.AreaApplicability</class>
+        <class>com.psc.model.psc.QosPlan</class>
+        <class>com.psc.model.psc.QosPlanThreshold</class>
+        <class>com.psc.model.psc.QosPlanPack</class>
+        <class>com.psc.model.psc.NumberCategory</class>
+        <class>com.psc.model.psc.MethodCharges</class>
+        <class>com.psc.model.psc.TrfScMode</class>
+        <class>com.psc.model.psc.ClientType</class>
+        <class>com.psc.model.psc.ExportParameter</class>
+
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="validate" />
+			<property name="hibernate.show_sql" value="false"/>
+			<property name="hibernate.format_sql" value="true"/>
+			<property name="hibernate.connection.autocommit" value="false" />
+        </properties>
+    </persistence-unit>
+
+	<persistence-unit name="psc_bis">
+		<provider>
+    		org.hibernate.ejb.HibernatePersistence
+		</provider>
+
+		<class>com.psc.model.bis.BISPackType</class>
+		<class>com.psc.model.bis.BISDetailGroup</class>
+		<class>com.psc.model.bis.BISDetailGroupType</class>
+		<class>com.psc.model.bis.BISRatePlanType</class>
+		<class>com.psc.model.bis.BISRatePlan</class>
+		<class>com.psc.model.bis.BISRatePlanPK</class>
+		<class>com.psc.model.bis.BISPack</class>
+		<class>com.psc.model.bis.BISBranch</class>
+		<class>com.psc.model.bis.BISZone</class>
+		<class>com.psc.model.bis.BISPrefixSet</class>
+		<class>com.psc.model.bis.BISLogicCall</class>
+		<class>com.psc.model.bis.BISMeasureUnit</class>
+		<class>com.psc.model.bis.BISVolumeUnit</class>
+		<class>com.psc.model.bis.BISServList</class>
+		<class>com.psc.model.bis.BISPackRtpl</class>
+		<class>com.psc.model.bis.BISPackRtplPK</class>
+		<class>com.psc.model.bis.BISRoundType</class>
+		<class>com.psc.model.bis.BISTax</class>
+		<class>com.psc.model.bis.BISTarifHistory</class>
+		<class>com.psc.model.bis.BISTarifHistoryPK</class>
+		<class>com.psc.model.bis.BISTarifHistoryPKInner</class>
+        <class>com.psc.model.bis.BISDiscountPlan</class>
+        <class>com.psc.model.bis.BISDiscountPlanHistoryPK</class>
+        <class>com.psc.model.bis.BISDiscountPlanHistory</class>
+        <class>com.psc.model.bis.BISDiscountThread</class>
+        <class>com.psc.model.bis.BISDiscountThreadCondition</class>
+        <class>com.psc.model.bis.BISDiscountThreadVolumes</class>
+        <class>com.psc.model.bis.BISDcplRtplHistories</class>
+        <class>com.psc.model.bis.BISDcplRtplHistoriesPK</class>
+        <class>com.psc.model.bis.BISFinanceAccumulatorType</class>
+        <class>com.psc.model.bis.BISFinanceAccumulatorDetgHist</class>
+        <class>com.psc.model.bis.BISPriceItem</class>
+        <class>com.psc.model.bis.BISPriceList</class>
+        <class>com.psc.model.bis.BISCountry</class>
+        <class>com.psc.model.bis.BISSpecialDay</class>
+        <class>com.psc.model.bis.BISFafType</class>
+        <class>com.psc.model.bis.BISRtplFaft</class>
+        <class>com.psc.model.bis.BISNumberType</class>
+        <class>com.psc.model.bis.BISTimeClass</class>
+        <class>com.psc.model.bis.BISTime</class>
+        <class>com.psc.model.bis.BISDirection</class>
+        <class>com.psc.model.bis.BISPackCategory</class>
+        <class>com.psc.model.bis.BISScaledPrice</class>
+        <class>com.psc.model.bis.BISDetailCharge</class>
+		<class>com.psc.model.bis.BISDetailChargePK</class>
+        <class>com.psc.model.bis.BISMsruSrls</class>
+        <class>com.psc.model.bis.BISTraficHistory</class>
+        <class>com.psc.model.bis.BISTraficHistoryPK</class>
+        <class>com.psc.model.bis.BISTraficHistoryPKInner</class>
+        <class>com.psc.model.bis.BISTraficByDirection</class>
+        <class>com.psc.model.bis.BISTraficByDirectionPK</class>
+        <class>com.psc.model.bis.BISTraficByDirectionPKInner</class>
+        <class>com.psc.model.bis.BISRatePlanDirection</class>
+        <class>com.psc.model.bis.BISPsetDirection</class>
+        <class>com.psc.model.bis.BISBvdBvdhDetgPK</class>
+        <class>com.psc.model.bis.BISBvdBvdhDetg</class>
+        <class>com.psc.model.bis.BISBvdBvdhRtplPK</class>
+        <class>com.psc.model.bis.BISBvdBvdhRtpl</class>
+        <class>com.psc.model.bis.BISBvdDiscountTables</class>
+        <class>com.psc.model.bis.BISBvdDiscountTableHistories</class>
+        <class>com.psc.model.bis.BISBvdDiscountTableValues</class>
+        <class>com.psc.model.bis.BISPackPriority</class>
+        <class>com.psc.model.bis.BISPackPriorityHistoriesPK</class>
+        <class>com.psc.model.bis.BISPackPriorityHistories</class>
+        <class>com.psc.model.bis.BISRtplZoneSubstitution</class>
+        <class>com.psc.model.bis.BISRtplRoamSubstitution</class>
+        <class>com.psc.model.bis.BISCamelRoamTarifZone</class>
+        <class>com.psc.model.bis.BISRtplNtyp</class>
+        <class>com.psc.model.bis.BISFreeTime</class>
+        <class>com.psc.model.bis.BISFreePhone</class>
+        <class>com.psc.model.bis.BISSdRtplChangeAvailable</class>
+        <class>com.psc.model.bis.BISPackArapHistories</class>
+        <class>com.psc.model.bis.BISPackArapHistoriesPK</class>
+        <class>com.psc.model.bis.BISSdRtplChangeAvailable</class>
+        <class>com.psc.model.bis.BISSdRtplChangeAvailablePK</class>
+        <class>com.psc.model.bis.BISSbmsObjPriv</class>
+		<class>com.psc.model.bis.BISQosPlan</class>
+		<class>com.psc.model.bis.BISQosPlanPack</class>
+		<class>com.psc.model.bis.BISQosPlanPackPK</class>
+		<class>com.psc.model.bis.BISQosPlanThreshold</class>
+		<class>com.psc.model.bis.BISSdPackMngtRules</class>
+		<class>com.psc.model.bis.BISSdPackMngtRulesPK</class>
+		<class>com.psc.model.bis.BISClientType</class>
+
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+			<!--Для ПРОМа включать validate нельзя, т.к. hibernate не "видит" синонимы 
+				оракловых таблиц -->
+			<!--<property name="hibernate.hbm2ddl.auto" value="validate"/> -->
+			<property name="hibernate.connection.autocommit" value="false" />
+            <!--<property name="hibernate.show_sql" value ="true"/>
+           <property name="hibernate.format_sql" value="true"/>
+           <property name="hibernate.use_sql_comments" value="true"/>
+           -->
+        </properties>
+
+    </persistence-unit>
+</persistence>
